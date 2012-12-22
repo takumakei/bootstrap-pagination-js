@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>test: bootstrap-pagination.js</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="pagination1"></div>
+    <div class="pagination pagination-centered pagination-large"></div>
+    <div class="pagination pagination-centered"></div>
+    <div class="pagination pagination-centered pagination-small"></div>
+    <div class="pagination pagination-centered pagination-mini"></div>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-pagination.min.js"></script>
+    <script>
+    $(function(){
+      var target = $('.pagination'),
+          options = {
+            prev: 'prev',
+            next: 'next',
+            left: 3,
+            right: 3,
+            page: 9,
+            lastPage: 10,
+            click: function(i) {
+              options.page = i;
+              target.pagination(options);
+            }
+          };
+      target.pagination(options);
+
+      $('.pagination1').addClass('pagination').pagination({ page: 10, lastPage: 10 });
+    });
+    </script>
+  </body>
+</html>
