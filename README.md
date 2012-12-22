@@ -39,7 +39,7 @@ the result is ...
       </ul>
     </div>
 
-#### one more another example.
+#### one more example.
 
     $('.pagination').pagination({ page: 10, lastPage: 10 });
 
