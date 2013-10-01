@@ -39,7 +39,7 @@
     }
     function newUL() {
       var ul = $('<ul/>'), i;
-      ul.append(newLI(options.prev, options.page - 1));
+      ul.addClass('pagination').append(newLI(options.prev, options.page - 1));
       for (i = begin; i <= end; i += 1) { ul.append(newLI(i, i)); }
       return ul.append(newLI(options.next, options.page + 1));
     }
