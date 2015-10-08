@@ -26,7 +26,7 @@
     }
     function newLI(label, page) {
       var enable = (1 <= page && page <= options.lastPage),
-          a = $('<a/>').append(label),
+          a = $('<a href="javascript:()"/>').append(label),
           li = $('<li/>').append(a);
       if (enable) {
         a.click(function () { options.click(page); });
